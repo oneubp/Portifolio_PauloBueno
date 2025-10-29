@@ -1,0 +1,301 @@
+/* Estilo geral */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  color: #111;
+  background: #fff;
+  line-height: 1.6;
+  transition: background 0.4s ease, color 0.4s ease;
+  padding-top: 100px; /* espaço para header fixo */
+}
+
+/* Cabeçalho */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: #fff;
+  color: #111;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000; /* garante que fique acima de tudo */
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+header .logo span {
+  color: #00bcd4;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #111;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #00bcd4;
+}
+
+/* Botão Dark Mode */
+#darkModeToggle {
+  margin-left: 20px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  transition: transform 0.3s, color 0.3s;
+  color: inherit;
+}
+
+#darkModeToggle:hover {
+  transform: rotate(20deg);
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  background: linear-gradient(to right, #f9f9f9, #e0e0e0);
+  color: #111;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero span {
+  color: #00bcd4;
+}
+
+.hero .btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #00bcd4;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.hero .btn:hover {
+  background: #0097a7;
+}
+
+/* Seções */
+section {
+  padding: 80px 50px;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+.sobre, .projetos, .contato {
+  background: #f9f9f9;
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 40px;
+}
+
+/* Tecnologias */
+.tecnologias {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.tecnologias .icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.tecnologias .icons i {
+  font-size: 40px;
+  color: #00bcd4;
+  transition: transform 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.tecnologias .icons i:hover {
+  transform: scale(1.3);
+  color: #0097a7;
+}
+
+/* Projetos / Carrossel */
+.carousel {
+  position: relative;
+  max-width: 600px;
+  margin: 40px auto;
+}
+
+.slides-container {
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+}
+
+.slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.slide.active {
+  opacity: 1;
+  transform: scale(1);
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.slide p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: inherit;
+}
+
+/* Botões do carrossel */
+.carousel .prev,
+.carousel .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 10%;
+  font-size: 24px;
+  z-index: 10;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.carousel .prev:hover,
+.carousel .next:hover {
+  background: rgba(0,0,0,0.8);
+  transform: translateY(-50%) scale(1.2);
+}
+
+.carousel .prev { left: -60px; }
+.carousel .next { right: -60px; }
+
+/* Dark Mode */
+body.dark-mode {
+  background: #121212;
+  color: #eaeaea;
+}
+
+body.dark-mode header {
+  background: #111;
+  color: #fff;
+}
+
+body.dark-mode nav ul li a {
+  color: #fff;
+}
+
+body.dark-mode header .logo span {
+  color: #00bcd4;
+}
+
+body.dark-mode .hero {
+  background: linear-gradient(to right, #111, #222);
+  color: #fff;
+}
+
+body.dark-mode .hero .btn {
+  background: #0097a7;
+}
+
+body.dark-mode .sobre,
+body.dark-mode .projetos,
+body.dark-mode .contato {
+  background: #1e1e1e;
+  color: #eaeaea;
+}
+
+body.dark-mode .card {
+  background: #2a2a2a;
+  color: #fff;
+}
+
+body.dark-mode .card a {
+  color: #eaeaea;
+}
+
+body.dark-mode footer {
+  background: #111;
+  color: #fff;
+}
+
+body.dark-mode .carousel .prev,
+body.dark-mode .carousel .next {
+  background: rgba(255,255,255,0.5);
+  color: #111;
+}
+
+body.dark-mode .carousel .prev:hover,
+body.dark-mode .carousel .next:hover {
+  background: rgba(255,255,255,0.8);
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+  color: #111;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* Foto de perfil */
+#perfil {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #00bcd4;
+}
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}

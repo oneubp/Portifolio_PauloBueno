@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio - Paulo Bueno</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+</head>
+
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <div class="logo">Paulo<span>Bueno</span></div>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+    <!-- Botão Dark Mode -->
+    <button id="darkModeToggle">🌙</button>
+  </header>
+
+  <!-- Seção inicial -->
+  <section id="inicio" class="hero">
+    <div class="logo-container">
+      <img src="../img/img3.jpg" id="perfil" alt="Foto Paulo">
+    </div>
+    <h1>Olá, eu sou o <span>Paulo.</span></h1>
+    <p>Desenvolvedor de Software Multiplataformas em formação.</p>
+    <a href="#projetos" class="btn">Ver Projetos</a>
+  </section>
+
+  <!-- Sobre -->
+  <section id="sobre" class="sobre">
+    <h2>Sobre Mim</h2>
+    <p>Militar da Força Aérea Brasileira e estudante de Desenvolvimento de Software Multiplataformas na FATEC Jacareí,
+      atualmente no 4º Semestre.</p>
+    <p>Nascido e criado em Jacareí-SP.</p>
+  </section>
+
+  <!-- Tecnologias -->
+  <section id="tecnologias" class="tecnologias">
+    <h2>Tecnologias estudadas e trabalhadas:</h2>
+    <div class="icons">
+      <i class="fab fa-react" title="React"></i>
+      <i class="fab fa-js-square" title="JavaScript"></i>
+      <i class="fab fa-node" title="Node.js"></i>
+      <i class="fas fa-database" title="MongoDB"></i>
+      <i class="fab fa-html5" title="HTML5"></i>
+      <i class="fab fa-css3-alt" title="CSS3"></i>
+      <i class="devicon-postgresql-plain colored" title="PostgreSQL"></i>
+      <i class="devicon-react-original colored" title="React Native"></i>
+      <i class="devicon-c-plain colored" title="C"></i>
+      <i class="devicon-figma-plain colored" title="Figma"></i>
+      <i class="devicon-trello-plain colored" title="Trello"></i>
+    </div>
+  </section>
+
+  <!-- Projetos -->
+  <section id="projetos" class="projetos">
+    <h2>Meus Projetos</h2>
+
+    <div class="carousel">
+      <!-- Botões -->
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+
+      <!-- Container de slides -->
+      <div class="slides-container">
+        <div class="slide active">
+          <img src="../img/njord.png" alt="Projeto 1">
+          <p>Njord é uma plataforma moderna de monitoramento climático desenvolvida para oferecer informações precisas e acessíveis sobre as condições meteorológicas da região. Com foco na segurança dos navegantes e na confiabilidade dos dados, a aplicação une tecnologia e usabilidade para facilitar a tomada de decisões em tempo real.
+        </div>
+
+        <div class="slide">
+          <img src="../img/ceres.png" alt="Projeto 2">
+          <p>Site voltado para nutrição que oferece uma experiência de resultados incríveis. A plataforma foi projetada para ser intuitiva e acessível, permitindo que os usuários sejam auxiliados e melhorem seus hábitos de alimentação, contribuindo assim para uma melhor qualidade de vida e bem-estar.
+        </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="contato">
+    <h2>Contato</h2>
+    <form>
+      <a>Email: paulo.bueno@fatec.sp.gov.br</a>
+    </form>
+    <div class="redes">
+      <a href="https://www.linkedin.com/in/pauloabueno/">LinkedIn</a> |
+      <a href="https://github.com/oneubp">GitHub</a>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>© 2025 Paulo Bueno</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script> <!-- Dark mode -->
+  <script src="carousel.js"></script> <!-- Carrossel -->
+</body>
+
+</html>
